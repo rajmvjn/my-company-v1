@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## This project uses following additional tool
+## This project uses following additional tools
 
 Tailwind CSS for styling
 Redux Toolkit for state management
