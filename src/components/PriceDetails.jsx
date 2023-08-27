@@ -8,7 +8,9 @@ import Dark from "../assets/img/imageClDark.png";
 import Arrow from "../assets/svg/Arrow/Line 6.svg";
 import Angled from "../assets/svg/LineAngled.svg";
 
-const sizeStyle =
+const SIZES = ["XS", "S", "M", "L", "XXL"];
+
+const SIZE_STYLE =
   "w-[82px] lg:w-[78px] h-[30px] border rounded-[100px] flex justify-center items-center cursor-pointer";
 
 const PriceDetails = () => {
@@ -36,13 +38,13 @@ const PriceDetails = () => {
         <div className="w-[333px] lg:w-[288px]  text-[32px] leading-[30.72px] lg:text-[48px] lg:leading-[46.08px]">
           JONATHAN SIMKHAI
         </div>
-        <div className="text-sm mt-2">
+        <div className="mt-2 text-sm">
           Lurex Linen Viscose Jacket in Conchiglia
         </div>
-        <div className="text-sm font-bold mt-2">$225</div>
+        <div className="mt-2 text-sm font-bold">$225</div>
         <div className="mt-6">
           <div className="w-[130px] h-[88px]">
-            <div className="text-sm flex gap-1">
+            <div className="flex gap-1 text-sm">
               <span className="font-bold">COLOR</span> <span>CONCHIGLIA</span>
             </div>
             <div className="flex mt-2">
@@ -84,54 +86,55 @@ const PriceDetails = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between text-sm mt-6">
+          <div className="flex justify-between mt-6 text-sm">
             <div className="font-bold">SIZE</div>
-            <span className="text-sm mr-1">SIZE GUIDE</span>
+            <span className="mr-1 text-sm">SIZE GUIDE</span>
           </div>
 
           <div className="flex flex-wrap gap-[2.5px] text-sm mt-2">
             <div
               className={
-                sizeSelection === "XS"
-                  ? sizeStyle + " bg-black text-white"
-                  : sizeStyle
+                sizeSelection === SIZES[0]
+                  ? SIZE_STYLE + " bg-black text-white"
+                  : SIZE_STYLE
               }
-              onClick={() => selectionHandler("XS")}
+              onClick={() => selectionHandler(SIZES[0])}
             >
               XS
             </div>
             <div
               className={
-                sizeSelection === "S"
-                  ? sizeStyle + " bg-black text-white"
-                  : sizeStyle
+                sizeSelection === SIZES[1]
+                  ? SIZE_STYLE + " bg-black text-white"
+                  : SIZE_STYLE
               }
-              onClick={() => selectionHandler("S")}
+              onClick={() => selectionHandler(SIZES[1])}
             >
-              S
+              {SIZES[1]}
             </div>
-            <div className={sizeStyle + " relative cursor-not-allowed"}>
-              <img className="absolute" src={Angled} alt="crossed" />M
-            </div>
-            <div
-              className={
-                sizeSelection === "L"
-                  ? sizeStyle + " bg-black text-white"
-                  : sizeStyle
-              }
-              onClick={() => selectionHandler("L")}
-            >
-              L
+            <div className={SIZE_STYLE + " relative cursor-not-allowed"}>
+              <img className="absolute" src={Angled} alt="crossed" />
+              {SIZES[2]}
             </div>
             <div
               className={
-                sizeSelection === "XXL"
-                  ? sizeStyle + " bg-black text-white"
-                  : sizeStyle
+                sizeSelection === SIZES[3]
+                  ? SIZE_STYLE + " bg-black text-white"
+                  : SIZE_STYLE
               }
-              onClick={() => selectionHandler("XXL")}
+              onClick={() => selectionHandler(SIZES[3])}
             >
-              XXL
+              {SIZES[3]}
+            </div>
+            <div
+              className={
+                sizeSelection === SIZES[4]
+                  ? SIZE_STYLE + " bg-black text-white"
+                  : SIZE_STYLE
+              }
+              onClick={() => selectionHandler(SIZES[4])}
+            >
+              {SIZES[4]}
             </div>
           </div>
         </div>

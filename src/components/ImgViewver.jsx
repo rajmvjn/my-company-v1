@@ -82,7 +82,7 @@ function ImgViewver() {
   return (
     <>
       {/* Large device view */}
-      <div className="w-[540px] h-[2381px] mt-[14px] lg:ml-[54px] hidden lg:block">
+      <div className="w-[540px] h-[2381px] mt-[14px] lg:ml-[54px] hidden lg:block relative">
         <img
           className="fixed w-5 h-[18px] left-[960px] top-[94px]"
           src={Heart}
